@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login_style.css') }}" />
+</head>
+<body>
+<!--/ vladmaxi top bar -->
+
+    <div id="login">
+        <p>Вход в панель администратора</p>
+        <form method="POST" action="{{ url_for('admin_login') }}">
+            <fieldset class="clearfix">
+                <p><span class="fontawesome-user"></span><input type="text" value="Логин" name="username" onBlur="if(this.value == '') this.value = 'Логин'" onFocus="if(this.value == 'Логин') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
+                <p><span class="fontawesome-lock"></span><input type="password"  value="Пароль" name="password" onBlur="if(this.value == '') this.value = 'Пароль'" onFocus="if(this.value == 'Пароль') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
+                <p><input type="submit" value="ВОЙТИ"></p>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

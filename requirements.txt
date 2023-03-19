@@ -1,0 +1,5 @@
+aiogram~=2.18
+aioredis<2.0
+environs~=9.0
+Flask~=2.2.3
+Werkzeug~=2.2.3

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Административная панель</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='main_style.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100" rel="stylesheet">
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <p id="title-logo">Панель администратора</p>
+        <form method="GET" action="{{ url_for('admin_logout') }}">
+          <input type="submit" value="Выйти" id="exit_button">
+        </form>
+      </div>
+    </nav>
+    <div class="menu">
+      <form method="GET" action="{{ url_for('admin_logout') }}">
+          <input type="submit" value="Главная" id="home" class="item_menu">
+      </form>
+      <form method="GET" action="{{ url_for('admin_logout') }}">
+          <input type="submit" value="Сообщения" id="message" class="item_menu">
+      </form>
+      <form method="GET" action="{{ url_for('admin_logout') }}">
+          <input type="submit" value="Пользователи" id="users" class="item_menu">
+      </form>
+      <form method="GET" action="{{ url_for('admin_logout') }}">
+          <input type="submit" value="Настройки" id="settings" class="item_menu">
+      </form>
+    </div>
+  </body>
+</html>
